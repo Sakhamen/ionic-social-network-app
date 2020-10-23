@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Friends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let friend of friends">
+      <ion-avatar slot="start">
+        <img src="{{friend.avatar}}">
+      </ion-avatar>
+      <ion-label>
+        <ion-row class="ion-no-padding">
+           <ion-col size="7">
+             <h3>{{friend.name}}</h3>
+             <p>{{friend.description}}</p>
+           </ion-col>
+           <ion-col size="5">
+             <ion-button color="medium" class="small-button" *ngIf="friend.is_online">Unfriend</ion-button>
+             <ion-button color="primary" class="small-button" *ngIf="!friend.is_online">Add Friend</ion-button>
+           </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

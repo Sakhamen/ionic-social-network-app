@@ -1,0 +1,16 @@
+.status-indicator {
+  position: absolute;
+  bottom: 0.625rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  --padding-start: 0;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.note-label {
+  font-size: 0.75rem;
+  margin-bottom: 0.3125rem;
+}

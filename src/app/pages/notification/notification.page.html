@@ -1,0 +1,22 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let friend of friends">
+      <ion-avatar slot="start">
+        <img src="{{friend.avatar}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{friend.name}}</h3>
+        <p>{{friend.notification_message.text}}</p>
+      </ion-label>
+      <ion-note slot="end" class="note">
+        {{friend.notification_message.time}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

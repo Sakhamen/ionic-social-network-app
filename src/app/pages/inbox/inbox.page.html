@@ -1,0 +1,45 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-segment mode="md" [(ngModel)]="segment">
+      <ion-segment-button value="message">
+        Message
+      </ion-segment-button>
+      <ion-segment-button value="group">
+        Group
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'message'">
+      <message-view></message-view>
+    </div>
+    <div *ngSwitchCase="'group'">
+      <group-view></group-view>
+    </div>
+  </div>
+
+  <!-- action button -->
+  <ion-fab horizontal="end" vertical="center" slot="fixed" edge>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light">
+        <ion-icon name="videocam"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light">
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button color="light">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

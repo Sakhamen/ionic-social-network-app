@@ -1,0 +1,49 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="{{user?.avatar}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{user?.name}}</h3>
+        <p *ngIf="user?.is_online">Online</p>
+        <p *ngIf="!user?.is_online">Last seen: 10:00 PM</p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <!-- User Text -->
+  <div class="chat-bubble left">
+    <div class="message">{{user?.last_message.text}}</div>
+    <div class="message-detail">
+      <span>{{user?.last_message.time}}</span>
+    </div>
+  </div>
+  <div class="clearFloat"></div>
+
+  <!-- Own Text -->
+  <div class="chat-bubble right">
+    <div class="message">Your response...</div>
+    <div class="message-detail">
+      <span>{{user?.last_message.time}}</span>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="footer-container">
+    <ion-button fill="clear" slot="start">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+    <ion-textarea rows="1" placeholder="write a message"></ion-textarea>
+    <ion-button fill="clear" slot="end">
+      <ion-icon slot="icon-only" name="mic"></ion-icon>
+    </ion-button>
+  </div>
+</ion-footer>

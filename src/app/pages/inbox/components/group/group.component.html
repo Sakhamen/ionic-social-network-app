@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-item lines="none" *ngFor="let group of groups" button (click)="openChat()" detail="false">
+    <ion-avatar slot="start">
+      <img src="{{'../../../../../' + group.avatar}}">
+    </ion-avatar>
+    <ion-label>
+      <h3>{{group.name}}</h3>
+      <p>{{group.last_message.text}}</p>
+    </ion-label>
+    <ion-note class="note" slot="end">
+      <label class="note-label">{{group.last_message.time}}</label>
+      <ion-badge mode="ios" color="warning" *ngIf="group.message_count">{{group.message_count}}</ion-badge>
+    </ion-note>
+  </ion-item>
+</ion-list>

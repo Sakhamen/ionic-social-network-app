@@ -1,0 +1,16 @@
+<ion-list>
+  <ion-item lines="none" *ngFor="let friend of friends" button (click)="openChat(friend)" detail="false">
+    <ion-avatar slot="start">
+      <ion-badge mode="ios" class="status-indicator" [color]="friend.is_online ? 'success' : 'medium'">&nbsp;</ion-badge>
+      <img src="{{friend.avatar}}">
+    </ion-avatar>
+    <ion-label>
+      <h3>{{friend.name}}</h3>
+      <p>{{friend.last_message.text}}</p>
+    </ion-label>
+    <ion-note class="note" slot="end">
+      <label class="note-label">{{friend.last_message.time}}</label>
+      <ion-badge mode="ios" color="warning" *ngIf="friend.message_count">{{friend.message_count}}</ion-badge>
+    </ion-note>
+  </ion-item>
+</ion-list>
