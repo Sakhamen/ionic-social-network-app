@@ -1,6 +1,6 @@
 # Social Network App
 
-Decided to implement the Sociality UI Kit By 4WD(https://www.uplabs.com/armayoprasetyo) available on UPLABS.
+Implementation of the Sociality UI Kit By 4WD (https://www.uplabs.com/armayoprasetyo).
 
 ![App Design](/screenshots/full-design.png)
 
