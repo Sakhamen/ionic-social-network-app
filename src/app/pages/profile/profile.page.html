@@ -1,9 +1,47 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>Sakhamen</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid>
+    <!-- Profile -->
+    <ion-row>
+      <ion-col>
+        <div class="profile__image">
+          <img src="https://avatars3.githubusercontent.com/u/9292544?s=460&u=f9bdace05bcf793e7c701b2c5a7259c70b70e0f5">
+        </div>
+        <div class="ion-text-center">
+          <h4>Sakhamen</h4>
+          <p>I am A Full-Stack JS Developer</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- Stats -->
+    <ion-row class="stats">
+      <ion-col>
+        <h6>356</h6>
+        <p>Photos</p>
+      </ion-col>
+      <ion-col>
+        <h6>860</h6>
+        <p>Friends</p>
+      </ion-col>
+      <ion-col>
+        <h6>20</h6>
+        <p>Groups</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- Grid -->
+    <ion-row>
+      <ion-col size="4" *ngFor="let item of friends">
+        <ion-img [src]="item.feed_image"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

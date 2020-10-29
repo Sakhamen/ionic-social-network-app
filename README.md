@@ -26,14 +26,16 @@ Implementation of the Sociality UI Kit By 4WD (https://www.uplabs.com/armayopras
 ![Friends Page](/screenshots/friends.png)
 
 ### Feed Page
-* Coming soon.
+
+![Feed Page](/screenshots/feed.png)
 
 ### Notification Page
 
 ![Notification Page](/screenshots/notification.png)
 
 ### Profile Page
-* Coming soon.
+
+![Profile Page](/screenshots/profile.png)
 
 
 ## Installation

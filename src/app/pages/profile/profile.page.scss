@@ -1,0 +1,22 @@
+.profile__image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile__image img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.stats {
+  text-align: center;
+}
+
+.stats h6 {
+  font-weight: bold;
+}
+
+.stats p {
+  color: #777;
+}

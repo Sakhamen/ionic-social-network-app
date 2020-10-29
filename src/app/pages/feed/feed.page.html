@@ -4,6 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
-
+<ion-content>
+  <ion-list class="ion-no-padding">
+    <ion-card *ngFor="let friend of friends">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="{{friend.avatar}}">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{friend.name}}</h3>
+        </ion-label>
+        <ion-note slot="end">
+          <ion-label>{{friend.last_message.time}}</ion-label>
+        </ion-note>
+      </ion-item>
+      <img src="{{friend.feed_image}}" [alt]="friend?.name">
+    </ion-card>
+  </ion-list>
 </ion-content>
